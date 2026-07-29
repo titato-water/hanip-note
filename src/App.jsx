@@ -12,20 +12,17 @@ const initialNotes = [
 ];
 
 function App() {
-  const title = 'state는 화면의 기억';
-  const body = '화면이 기억할 값은 state로 관리한다.';
-
   return (
-      <main className="note-app">
-        <h1>한입 노트</h1>
+    <main className="note-app">
+      <h1>한입 노트</h1>
 
-        {initialNotes.map(note => (
+      {initialNotes.map(note => (
         <article className="note-card" key={note.id}>
-          <h2>{title}</h2>
-          <p>{body}</p>
+          <h2>{note.title}</h2>
+          <p>{note.body}</p>
         </article>
-        ))}
-      </main>
+      ))}
+    </main>
   );
 }
 
